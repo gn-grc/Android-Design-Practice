@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_add"
+        android:icon="@drawable/ic_add_circle_black_24dp"
+        android:title="Add" />
+
+    <item
+        android:id="@+id/nav_tutorial"
+        android:icon="@drawable/ic_tutorial_black_24dp"
+        android:title="Tutorial" />
+
+    <item
+        android:id="@+id/nav_quiz"
+        android:icon="@drawable/ic_quiz_black_24dp"
+        android:title="Quiz" />
+
+</menu>

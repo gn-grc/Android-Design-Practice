@@ -1,135 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.core.widget.NestedScrollView
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentBottom="false"
-
-                android:fontFamily="@font/asap"
-
-                android:padding="20dp"
-
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Venenatis cras sed felis eget velit aliquet sagittis." />
-
-            <TextView
-                android:id="@+id/tv2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentBottom="false"
-
-                android:fontFamily="@font/asap"
-
-                android:padding="20dp"
-                android:layout_below="@+id/tv1"
-
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Venenatis cras sed felis eget velit aliquet sagittis."
-
-                />
-
-            <TextView
-                android:id="@+id/tv3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentBottom="false"
-
-                android:fontFamily="@font/asap"
-
-                android:padding="20dp"
-                android:layout_below="@+id/tv2"
-
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Venenatis cras sed felis eget velit aliquet sagittis."
-
-                />
-
-            <TextView
-                android:id="@+id/tv4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentBottom="false"
-
-                android:fontFamily="@font/asap"
-
-                android:padding="20dp"
-                android:layout_below="@+id/tv3"
-
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Venenatis cras sed felis eget velit aliquet sagittis."
-
-                />
-
-            <TextView
-                android:id="@+id/tv5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentBottom="false"
-
-                android:fontFamily="@font/asap"
-
-                android:padding="20dp"
-                android:layout_below="@+id/tv4"
-
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Venenatis cras sed felis eget velit aliquet sagittis."
-
-                />
-
-            <TextView
-                android:id="@+id/tv6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="false"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentBottom="false"
-
-                android:fontFamily="@font/asap"
-
-                android:padding="20dp"
-                android:layout_below="@+id/tv5"
-
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque sagittis purus sit amet. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Venenatis cras sed felis eget velit aliquet sagittis."
-
-                />
-
-        </RelativeLayout>
-
-    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav"
+        />
 
 
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
