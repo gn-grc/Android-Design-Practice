@@ -7,6 +7,7 @@
     tools:context=".QuizFragment">
 
     <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -14,5 +15,20 @@
         android:gravity="center"
         android:textSize="50dp"
         android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/tv"
+
+        android:layout_marginBottom="40dp"
+
+        android:gravity="center"
+
+        android:text="text"
+        android:textSize="24sp" />
 
 </RelativeLayout>

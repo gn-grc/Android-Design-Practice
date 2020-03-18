@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 public class QuizFragment extends Fragment {
@@ -17,7 +18,28 @@ public class QuizFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_quiz, container, false);
+        rootView =  inflater.inflate(R.layout.fragment_quiz, container, false);
+
+        init();
+
+        configureCall();
+
+        return rootView;
+    }
+
+    private void configureCall(){
+        Bundle bundle = getArguments();
+
+        tvDisplay.setText( bundle.getString("message") );
+    }
+
+    // Component
+
+    private View rootView;
+    private TextView tvDisplay;
+
+    private void init(){
+        tvDisplay = rootView.findViewById(R.id.tvDisplay);
     }
 
 }

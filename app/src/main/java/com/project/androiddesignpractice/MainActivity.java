@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new AddFragment();
                         break;
                     case R.id.nav_tutorial:
-                        selectedFragment = new TutorialFragment();
+                        selectedFragment = new SelectFragment();
                         break;
                     case R.id.nav_quiz:
-                        selectedFragment = new QuizFragment();
+                        selectedFragment = new SelectFragment();
                         break;
                 }
 
